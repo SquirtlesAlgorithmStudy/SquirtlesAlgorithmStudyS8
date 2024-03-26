@@ -1,5 +1,5 @@
 /*
-    대체 뭐 어디가 틀린건지 모르겠음
+    대체 뭐 어디가 틀린건지 모르겠음 -> 반복 시 flag=true 안해줬었다
 */
 
 
@@ -18,6 +18,7 @@ int main(){
 
         stack<char> c1;
         for(int i=0; i<inputString.size(); i++){
+            flag = true;
             if(inputString[i] == '(' || inputString[i] == '['){
                 c1.push(inputString[i]);
             }
