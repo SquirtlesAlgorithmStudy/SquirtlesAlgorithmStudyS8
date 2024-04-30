@@ -97,15 +97,6 @@ int main(){
 
         whichGear.pop();
         rotationDir.pop();
-
-        for(int a=0; a<allGears.size(); a++){
-            cout << "gear " << a << ": ";
-            for(int b=0; b<allGears[0].size(); b++){
-                cout << allGears[a][b];
-            }        
-            cout << endl;
-        }
-        cout << " ------------- " << endl;
     }   
 
     
