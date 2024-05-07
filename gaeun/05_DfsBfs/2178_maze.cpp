@@ -51,14 +51,6 @@ int main(){
         }
     }
 
-    /* maze debugging
-    for(int i=0; i<mazeRow; i++){
-        for(int j=0; j<mazeCol; j++){
-            cout << maze[i][j] << " ";
-        }
-        cout << endl;
-    }*/    
-
     // print the result
     cout << bfs(0,0) << '\n';
 }
