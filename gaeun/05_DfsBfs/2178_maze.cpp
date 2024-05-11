@@ -20,23 +20,31 @@ int bfs(int r, int c){
         /*
             방문하지 않은 인접 노드들 중 다음 조건을 만족시키는 노드만 큐에 삽입
             1. maze 범위 벗어나지 않을 것
-            2. 갈 수 있는 길(1)일 것
-            3. 첫 방문일 것
+            2. 갈 수 있는 길이며 첫 방문(1)일 것
         */ 
         // 상하좌우
         for(int i=0; i<4; i++){
             int nRow = row + dRow[i];
             int nCol = col + dCol[i];
+
             // maze 범위 확인
             if(nRow <= -1 || nRow >= mazeRow || nCol <= -1 || nCol >= mazeCol) continue;
-            // 갈 수 있는 길인지 확인
-            if(maze[nRow][nCol] == 0) continue;
-            // 위 두 조건을 만족시키고 첫 방문이라면 이전 노드 경로 길이에 +1, 큐에 삽입
+
+            // 갈 수 있는 길이고, 첫 방문이라면(1) 이전 노드 경로 길이에 +1, 큐에 삽입
             if(maze[nRow][nCol] == 1){
                 maze[nRow][nCol] = maze[row][col] + 1; 
                 q.push({nRow,nCol});                
             }           
         }      
+        // just for debugging
+        for(int i=0; i<mazeRow; i++){
+                for(int j=0; j<mazeCol; j++){
+                   cout << maze[i][j] << " ";
+                }
+                cout << endl;
+            }
+        cout << "current q size: " << q.size() << endl;
+        cout << "q.front: " << row << ", " << col << endl; 
     }
     // 마지막 maze node에 저장된 경로 길이 값 return
     return maze[mazeRow-1][mazeCol-1];  
@@ -50,6 +58,14 @@ int main(){
             scanf("%1d", &maze[row][col]);
         }
     }
+
+    /* maze debugging
+    for(int i=0; i<mazeRow; i++){
+        for(int j=0; j<mazeCol; j++){
+            cout << maze[i][j] << " ";
+        }
+        cout << endl;
+    }*/    
 
     // print the result
     cout << bfs(0,0) << '\n';
