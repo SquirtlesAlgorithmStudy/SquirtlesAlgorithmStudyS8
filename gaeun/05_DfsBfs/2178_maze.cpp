@@ -11,7 +11,7 @@ int dCol[] = {0,0,-1,1};
 
 int bfs(int r, int c){
     queue<pair<int,int>> q;
-    // 시작 node 삽입, 방문처리 x??
+    // 시작 node 삽입, 방문처리는 'maze[nRow][nCol] = maze[row][col] + 1' 로직으로
     q.push({r,c});
     while(!q.empty()){ // 더 이상 방문할 node가 없을 때까지 
         int row = q.front().first;

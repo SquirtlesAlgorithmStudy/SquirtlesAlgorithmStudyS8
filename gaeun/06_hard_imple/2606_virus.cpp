@@ -1,3 +1,4 @@
+// 감염되는 것 묶어내기 -> DFS
 #include <iostream>
 #include <vector>
 using namespace std;
