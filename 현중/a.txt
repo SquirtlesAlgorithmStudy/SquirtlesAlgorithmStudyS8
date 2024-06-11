@@ -1,1 +1,4 @@
 #include<>
+// git : local repo
+// github : remote repo
+// git add. : staging area에 넣는다. 
