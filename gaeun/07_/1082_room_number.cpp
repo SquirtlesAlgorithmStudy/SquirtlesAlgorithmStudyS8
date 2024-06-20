@@ -25,8 +25,10 @@ int main(){
         return a.second < b.second;}
     );
 
-    // 두자리 이상 가능할 때, 0은 가장 앞자리에 올 수 없음
-    if(M>=priceList[1].first && priceList[0].first == 0){
+    if(N==1) cout << 0;
+    
+    // 두자리 이상이 가능할 때, 0은 가장 앞자리에 올 수 없음
+    if(M>=priceList[1].second && priceList[0].first == 0){
         roomNumber = to_string(priceList[1].first);
         M = M - priceList[1].second;
     }
@@ -46,6 +48,7 @@ int main(){
                 // 차액만큼 M 감소시켜주고, rommNumber 바꿔
                 M = M - (P[k] - P[roomNumber[i] - '0']);
                 roomNumber[i] = k + '0';
+                break;
             }
         }
     }
