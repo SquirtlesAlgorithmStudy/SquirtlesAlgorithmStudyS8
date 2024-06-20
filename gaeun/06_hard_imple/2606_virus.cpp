@@ -36,7 +36,10 @@ int main(){
 void dfs(int node){
     for(int i=0; i<computerMap[node].size(); i++){
         int connectedNode = computerMap[node][i];
-        if(!is_visited[connectedNode]){
+        
+        // base case: 모든 노드를 방문했다면 dfs terminate
+        
+        if(!is_visited[connectedNode]){ // recursive case:
             is_visited[connectedNode] = 1;
             dfs(connectedNode);
             result++;

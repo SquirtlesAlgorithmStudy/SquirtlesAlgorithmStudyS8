@@ -36,6 +36,7 @@ void bfs(){
 
         // 못찾았을 때, *2의 거리 이동
         if(currLoc*2 <= 100000 && findTime[currLoc*2] == 0){
+            // 만약 currLoc = 0 이라면, continue 넣어주면ㄴ 좋겠지? 0에 아무리 곱해봐야 0인데..
             findTime[currLoc * 2] = findTime[currLoc] + 1;
             q.push(currLoc * 2);
         }
