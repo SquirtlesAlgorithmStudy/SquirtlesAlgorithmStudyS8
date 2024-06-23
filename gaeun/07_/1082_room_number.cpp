@@ -25,8 +25,11 @@ int main(){
         return a.second < b.second;}
     );
 
-    if(N==1) cout << 0;
-    
+    if(N==1){
+        cout << 0;
+        return 0;
+    } 
+
     // 두자리 이상이 가능할 때, 0은 가장 앞자리에 올 수 없음
     if(M>=priceList[1].second && priceList[0].first == 0){
         roomNumber = to_string(priceList[1].first);
