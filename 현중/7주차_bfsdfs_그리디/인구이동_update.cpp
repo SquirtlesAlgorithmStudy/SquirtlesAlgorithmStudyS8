@@ -41,10 +41,10 @@ void bfs(pair<int,int> start){ // bfs를 시작할 좌표를 queue에 추가
         // 1. 범위 안에 있고 2. 방문하지 않으며 3. 인구차이가 조건에 맞음
         if(new_x>=0 && new_y>=0 && new_x < N && new_y < N && !visited[new_x][new_y]){
             if( abs(arr[new_x][new_y] - arr[temp.first][temp.second]) >=L && abs(arr[new_x][new_y] - arr[temp.first][temp.second]) <=R ){
-                q.push({new_x, new_y}); //1. queue에 새로운 좌표를 추가하여 다음 탐색 노드 설정
-                visited[new_x][new_y] = true; //2. 방문처리
-                v.push_back({new_x,new_y}); //3. 연합된 국가벡터에 새로운 좌표 추가하여 연합에 포함된 국가 목록 추가
-                sum += arr[new_x][new_y]; // 4. 연합된 인구 합계에 새로운 좌표의 인구수를 추가하여 연합된 인구수 계산
+                q.push({new_x, new_y});         //1. queue에 새로운 좌표를 추가하여 다음 탐색 노드 설정
+                visited[new_x][new_y] = true;   //2. 방문처리
+                v.push_back({new_x,new_y});     //3. 연합된 국가벡터에 새로운 좌표 추가하여 연합에 포함된 국가 목록 추가
+                sum += arr[new_x][new_y];       //4. 연합된 인구 합계에 새로운 좌표의 인구수를 추가하여 연합된 인구수 계산
 
             }
         }
