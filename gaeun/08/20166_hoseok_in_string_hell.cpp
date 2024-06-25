@@ -1,3 +1,7 @@
+// 신이 좋아하는 문자열 입력 후 search -> 최대 10*10*8^5*1000 (+ alpha) = 4억 = 4초
+// grid에서 만들 수 있는 문자열을 모두 저장 후, 문자열을 k개 입력받아 search -> 최대 10*10*8^5(3백만대) + 탐색
+// O(logN)을 갖고, key-value쌍을 지원하는 map을 써봅시다. 
+
 #include <iostream>
 using namespace std;
 
