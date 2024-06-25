@@ -1,27 +1,23 @@
 // 20166번 문자열 지옥에 빠진 호석
 
-// 주어진 격자에서 시작하여 가능한 모든 문자열 생성
-// 각 문자열이 몇번 생성되는지 cnt
-// 경로의 특징을 저장해야 하기에 dfs사용
-
 #include <iostream>
 #include <string>
 #include <unordered_map> // 문자열의 빈도를 해시맵에 저장
 
 using namespace std;
 
-struct pos
+struct pos 
 {
     int r;
     int c;
 };
 
 //3<N, M<10 행렬판
-int N;
-int M;
+int N; // 행수
+int M; // 열수
 int K; // 문자열 수
 
-string board[10]; // 격자내용 (M<10이기 때문에)
+string board[10]; // 격자내용 
 unordered_map<string, int> cnt; // 문자열의 빈도를 저장
 
 //격자 내부에 있는지 확인함수
@@ -57,12 +53,12 @@ pos get_pos(pos currunt, int d)
 //경로를 탐색 -> 문자열 생성 -> cnt
 void dfs(pos curr, string s)
 {
-    int i; // 방향
+    int i; 
 
-    s += board[curr.r][curr.c]; // 현좌표에서 시작 -> 모든 문자열생성
+    s += board[curr.r][curr.c]; 
     cnt[s]++;                   
 
-    // 최대길이5만큼가면 return  (1<문자열길이<5)
+
     if(s.size() == 5) 
         return;
 
@@ -81,14 +77,14 @@ int main()
 	cin.tie(NULL);
 	cout.tie(NULL);*/
 
-    cin>>N>>M>>K; // 격자크기(N,M) / 처리해야할 문자열수(K)     1<k<1000개
+    cin>>N>>M>>K; 
 
     for(i = 0; i < N; i++)
     {
-        cin >> board[i]; // 각내용을 입력받아 board배열에 저장
+        cin >> board[i]; 
     }
 
-    // 모든 좌표에서 시작하여 만들수 있는 문자열 생성
+    // dfs를 호출하여 모든 좌표에서 시작하여 만들수 있는 문자열 생성
     for(p.r=0; p.r<N; p.r++){
         for(p.c=0; p.c<M; p.c++){
             dfs(p, "");
