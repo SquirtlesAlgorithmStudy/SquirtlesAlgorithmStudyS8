@@ -28,7 +28,7 @@ int main(){
         }
     }
 
-    // greedy to find the lands will be disappeared
+    // find the lands will be disappeared
     for(int i=0; i<R; i++){
         for(int j=0; j<C; j++){
             if(MAP[i][j] == 'X'){ // 전체 MAP 순회하다가 땅 발견 시
@@ -78,7 +78,4 @@ int main(){
         }
         cout << endl;
     }
-
-
-
 }
