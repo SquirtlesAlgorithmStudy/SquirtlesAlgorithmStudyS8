@@ -1,4 +1,4 @@
-# Set (value가 없는 Hashtable) 이용 -> 160ms
+# List 이용 : Time Out
 import sys
 input = sys.stdin.readline
 
@@ -23,16 +23,20 @@ Q = time_to_regular_form(infos[2])
 # print(S, E, Q)
 
 ans = 0
-enter_check = set()
+enter_check = []
 while True:
     try:
         log_line = input().rstrip()
         time, name = log_line_to_info(log_line)
         if time <= S:
-            enter_check.add(name)
-        elif (E <= time <= Q) and (name in enter_check):
-            ans += 1
-            enter_check.remove(name)
+            if name not in enter_check:
+                enter_check.append(name)
+        elif (E <= time <= Q):
+            for idx, n in enumerate(enter_check):
+                if n == name:
+                    del enter_check[idx]
+                    ans += 1
+                    break
 
     except:
         break
