@@ -4,8 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-string S,E,Q;
-set<string> startMem;   // 중복 배제를 위한 set 사용. find는 O(log(n))
+string S,E,Q;   
 map<string, int> member;
 int attendanceCnt = 0;
 
