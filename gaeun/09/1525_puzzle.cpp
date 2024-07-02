@@ -1,3 +1,6 @@
+// cnt 1번 증가에 최대 (9+9)*9*4*(9+9) -> cnt가 8000 이상이 되면 time over
+// Q. 시간복잡도 이렇게 계산하는 것 맞나?
+
 #include <iostream>
 using namespace std;
 
@@ -65,14 +68,6 @@ int main(){
                     puzzle[i][j] = puzzle[swapRow][swapCol];
                     puzzle[swapRow][swapCol] = 0;
 
-                    // debugging
-                    for(int i=0; i<3; i++){
-                        for(int j=0; j<3; j++){     
-                            cout << puzzle[i][j] << " ";
-                        }
-                        cout << endl;
-                    }
-
                     // 3. check if it's sorted
                     if(checkSolved()){
                         cout << cnt;
@@ -89,10 +84,6 @@ int main(){
         } 
     }   
 }
-
-
-
-
 
 // #include <iostream>
 // using namespace std;
