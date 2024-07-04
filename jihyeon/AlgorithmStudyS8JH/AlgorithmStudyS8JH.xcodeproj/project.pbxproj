@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B889E0732C33F4AA00809148 /* boj_1525.swift in Sources */ = {isa = PBXBuildFile; fileRef = B889E0722C33F4AA00809148 /* boj_1525.swift */; };
+		B8D746962C3681D9007AF3E2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D746952C3681D9007AF3E2 /* main.swift */; };
+		B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,8 @@
 		B889E0672C33C2AC00809148 /* AlgorithmStudyS8JH */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmStudyS8JH; sourceTree = BUILT_PRODUCTS_DIR; };
 		B889E06A2C33C2AC00809148 /* boj_19583.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_19583.swift; sourceTree = "<group>"; };
 		B889E0722C33F4AA00809148 /* boj_1525.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1525.swift; sourceTree = "<group>"; };
+		B8D746952C3681D9007AF3E2 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HeapAndPQ.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		B889E0692C33C2AC00809148 /* AlgorithmStudyS8JH */ = {
 			isa = PBXGroup;
 			children = (
+				B8D746942C3681D1007AF3E2 /* 7.9 */,
 				B889E0712C33C2BC00809148 /* 7.2 */,
 			);
 			path = AlgorithmStudyS8JH;
@@ -70,6 +74,15 @@
 				B889E0722C33F4AA00809148 /* boj_1525.swift */,
 			);
 			path = 7.2;
+			sourceTree = "<group>";
+		};
+		B8D746942C3681D1007AF3E2 /* 7.9 */ = {
+			isa = PBXGroup;
+			children = (
+				B8D746952C3681D9007AF3E2 /* main.swift */,
+				B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */,
+			);
+			path = 7.9;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B889E0732C33F4AA00809148 /* boj_1525.swift in Sources */,
+				B8D746962C3681D9007AF3E2 /* main.swift in Sources */,
+				B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
