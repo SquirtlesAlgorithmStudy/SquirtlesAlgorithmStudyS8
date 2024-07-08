@@ -5,6 +5,7 @@
 
 int toMinutes(const std::string& inTime) 
 {
+    // 00:00
     int hours = std::stoi(inTime.substr(0, 2));
     int minutes = std::stoi(inTime.substr(3, 2));
     return hours * 60 + minutes;
@@ -47,8 +48,10 @@ int main()
             continue;
         }
 
-        if (chat_time_minutes >= end_meeting_minutes) {
-            if (m.find(name) != m.end()) {
+        if (chat_time_minutes >= end_meeting_minutes) 
+        {
+            if (m.find(name) != m.end()) 
+            {
                 m.erase(name);
                 result++;
             }
