@@ -24,6 +24,7 @@ dr = [1, -1, 0, 0]
 dc = [0, 0, 1, -1]
 
 board = []
+
 for _ in range(3):
     board += list(input().rstrip().split())
 
