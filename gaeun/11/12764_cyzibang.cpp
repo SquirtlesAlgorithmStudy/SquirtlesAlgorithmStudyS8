@@ -1,3 +1,5 @@
+// for문을 쓰니 아니나다를까 시간초과
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;

@@ -2,14 +2,23 @@
 #include <bitset>
 using namespace std;
 
+#define BITS 20
+
+int count(int num){
+    int cnt = 0;
+    for(int i=0; i<BITS; i++){
+        if(num & (0b01 << i)) cnt++;
+    }
+    return cnt;
+}
+
 int main(){
     int N, K;
     cin >> N >> K;
 
     int purchasedBottle = 0;
 
-    // bitset: 1인 bit을 설정한다 -> .count method는 설정된 bit를, 즉 1인 bit를 셈.
-    while(bitset<32>(N).count() > K){
+    while(count(N) > K){
         N++;
         purchasedBottle++;
     }
