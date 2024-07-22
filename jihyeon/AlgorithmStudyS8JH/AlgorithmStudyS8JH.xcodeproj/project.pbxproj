@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */; };
-		B8EFF6A32C464F3100E67E15 /* boj_1052.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EFF6A22C464F3100E67E15 /* boj_1052.swift */; };
+		B8EFF6A52C46A2A100E67E15 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EFF6A42C46A2A100E67E15 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +30,7 @@
 		B8D746952C3681D9007AF3E2 /* boj_1715.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1715.swift; sourceTree = "<group>"; };
 		B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HeapAndPQ.docc; sourceTree = "<group>"; };
 		B8EFF6A22C464F3100E67E15 /* boj_1052.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1052.swift; sourceTree = "<group>"; };
+		B8EFF6A42C46A2A100E67E15 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				B8EFF6A22C464F3100E67E15 /* boj_1052.swift */,
+				B8EFF6A42C46A2A100E67E15 /* main.swift */,
 			);
 			path = 7.16;
 			sourceTree = "<group>";
@@ -154,7 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8EFF6A32C464F3100E67E15 /* boj_1052.swift in Sources */,
+				B8EFF6A52C46A2A100E67E15 /* main.swift in Sources */,
 				B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

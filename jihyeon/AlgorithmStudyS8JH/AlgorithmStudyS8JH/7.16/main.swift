@@ -1,89 +1,86 @@
-# Heap And Priority Queue
+//
+//  main.swift
+//  AlgorithmStudyS8JH
+//
+//  Created by 김지현 on 2024/07/16.
+//
 
-7.9 알고리즘 과제에 선행하여 알아본 Heap과 PQ
-
-## Overview
-
-### Heap
-Heap은 완전 이진트리이다.
-부모노드가 자식노드보다 크거나 작다는 특성을 가지고 있기 때문에,
-최댓값 또는 최소값을 효율적으로 찾고 제거할 수 있다.
-
-```
 import Foundation
+// 1781 컵라면
 
+// Heap .... ㅂㄷㅂㄷ
 struct Heap<Element: Comparable> {
     private var elements: [Element] = []
     private let sort: (Element, Element) -> Bool
-    
+
     init(sort: @escaping (Element, Element) -> Bool) {
         self.sort = sort
     }
-    
+
     init(sort: @escaping (Element, Element) -> Bool, elements: [Element]) {
         self.sort = sort
         self.elements = elements
         buildHeap()
     }
-    
+
     private mutating func buildHeap() {
         for index in (0..<(elements.count / 2)).reversed() {
             siftDown(from: index)
         }
     }
-    
+
     var isEmpty: Bool {
         return elements.isEmpty
     }
-    
+
     var count: Int {
         return elements.count
     }
-    
+
     func peek() -> Element? {
         return elements.first
     }
-    
+
     mutating func insert(_ value: Element) {
         elements.append(value)
         siftUp(from: elements.count - 1)
     }
-    
+
     mutating func remove() -> Element? {
         guard !elements.isEmpty else {
             return nil
         }
-        
+
         elements.swapAt(0, elements.count - 1)
         let removed = elements.removeLast()
         if !elements.isEmpty {
             siftDown(from: 0)
         }
-        
+
         return removed
     }
-    
+
     private mutating func siftUp(from index: Int) {
         var childIndex = index
         let child = elements[childIndex]
         var parentIndex = self.parentIndex(of: childIndex)
-        
+
         while childIndex > 0 && sort(child, elements[parentIndex]) {
             elements[childIndex] = elements[parentIndex]
             childIndex = parentIndex
             parentIndex = self.parentIndex(of: childIndex)
         }
-        
+
         elements[childIndex] = child
     }
-    
+
     private mutating func siftDown(from index: Int) {
         var parentIndex = index
         while true {
             let leftChildIndex = self.leftChildIndex(of: parentIndex)
             let rightChildIndex = leftChildIndex + 1
             var optionalParent = parentIndex
-            
+
             if leftChildIndex < elements.count && sort(elements[leftChildIndex], elements[optionalParent]) {
                 optionalParent = leftChildIndex
             }
@@ -97,27 +94,19 @@ struct Heap<Element: Comparable> {
             parentIndex = optionalParent
         }
     }
-    
+
     private func parentIndex(of index: Int) -> Int {
         return (index - 1) / 2
     }
-    
+
     private func leftChildIndex(of index: Int) -> Int {
         return 2 * index + 1
     }
 }
 
-```
-
-### Priority Queue
-Priority Queue는 우선순위가 높은 요소가 먼저 처리되는 자료구조이다.
-대부분 내부적으로 힙을 사용하여 구현된다.
-
-## Heap & Priority Queue
-|특성|Heap|Priority Queue|
-|------|---|---|
-|정의|완전 이진 트리|우선순위 기반 큐|
-|구현 방식|배열로 구현|힙을 사용하여 구현|
-|주요 연산|삽입, 삭제, 최대/최소 값|삽입, 삭제, 최고 우선순위 값|
-|사용 예시|힙 정렬, 우선순위 큐 구현|작업 스케줄링, 다익스트라 알고리즘|
-|복잡도|삽입 O(logn), 삭제 O(logn)|삽입 O(logn), 삭제 O(logn)|
+let hwNum = Int(readLine()!)!
+var tuple: [(deadline: Int, rmNum: Int)] = []
+for _ in 0..<hwNum {
+    let input = readLine()!.components(separatedBy: " ").map { Int($0)! }
+    tuple.append((input[0], input[1]))
+}
