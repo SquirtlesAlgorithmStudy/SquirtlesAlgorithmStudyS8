@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */; };
 		B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */; };
 		B8EFF6A32C464F3100E67E15 /* boj_1052.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EFF6A22C464F3100E67E15 /* boj_1052.swift */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		B889E0672C33C2AC00809148 /* AlgorithmStudyS8JH */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmStudyS8JH; sourceTree = BUILT_PRODUCTS_DIR; };
 		B889E06A2C33C2AC00809148 /* boj_19583.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_19583.swift; sourceTree = "<group>"; };
 		B889E0722C33F4AA00809148 /* boj_1525.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1525.swift; sourceTree = "<group>"; };
+		B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = 7_23_Document.docc; sourceTree = "<group>"; };
 		B8D746952C3681D9007AF3E2 /* boj_1715.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1715.swift; sourceTree = "<group>"; };
 		B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = HeapAndPQ.docc; sourceTree = "<group>"; };
 		B8EFF6A22C464F3100E67E15 /* boj_1052.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1052.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		B889E0692C33C2AC00809148 /* AlgorithmStudyS8JH */ = {
 			isa = PBXGroup;
 			children = (
+				B8A7D2722C4E40BC00B4BF87 /* 7.23 */,
 				B8EFF6A12C4642B500E67E15 /* 7.16 */,
 				B8D746942C3681D1007AF3E2 /* 7.9 */,
 				B889E0712C33C2BC00809148 /* 7.2 */,
@@ -76,6 +79,14 @@
 				B889E0722C33F4AA00809148 /* boj_1525.swift */,
 			);
 			path = 7.2;
+			sourceTree = "<group>";
+		};
+		B8A7D2722C4E40BC00B4BF87 /* 7.23 */ = {
+			isa = PBXGroup;
+			children = (
+				B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */,
+			);
+			path = 7.23;
 			sourceTree = "<group>";
 		};
 		B8D746942C3681D1007AF3E2 /* 7.9 */ = {
@@ -155,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EFF6A32C464F3100E67E15 /* boj_1052.swift in Sources */,
+				B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */,
 				B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
