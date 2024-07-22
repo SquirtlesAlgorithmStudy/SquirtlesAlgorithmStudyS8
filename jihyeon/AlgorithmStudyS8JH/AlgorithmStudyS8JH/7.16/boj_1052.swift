@@ -16,7 +16,7 @@ let K = input[1]
 var answer = 0
 // 매번 2진수로 변환해서 1의 개수가 K개를 초과하는지 확인
 // N이 최대 10^7 이므로 초과
-while String(N, radix: 2).filter({ $0 == "1" }).count > K { // N을 한자리한자리 다 도는게 대략 logn
+while String(N, radix: 2).filter({ $0 == "1" }).count > K {
     answer += 1
     N += 1
 }
