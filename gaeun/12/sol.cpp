@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <vector>
 #include <set>
@@ -75,13 +74,4 @@ int solution(int coin, vector<int> cards) {
     }
 
     return answer;
-}
-
-
-int main() {
-    int coin = 2;
-    vector<int> vec = {5, 8, 1, 2, 9, 4, 12, 11, 3, 10, 6, 7};
-    cout << solution(coin, vec);
-
-    return 0;
 }
