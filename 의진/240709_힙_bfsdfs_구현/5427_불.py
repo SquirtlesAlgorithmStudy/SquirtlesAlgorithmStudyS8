@@ -33,7 +33,7 @@ def bfs(start, fire_pos, visited):
                         board[nr][nc] = "*"
                         new_fire_pos.append((nr, nc))
 
-                fire_pos = new_fire_pos
+            fire_pos = new_fire_pos
 
         for i in range(4):
             nr = r + dr[i]
