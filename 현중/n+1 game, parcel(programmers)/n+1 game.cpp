@@ -1,9 +1,9 @@
 // 프로그래머스 n + 1 카드게임
 
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
-#include<vector>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iostream>
 
 
 using namespace std;
@@ -19,7 +19,7 @@ int CardsList[1001] = {0,}; // 내가 뽑을 수 있는 카드 리스트
 // 손에 들고있는 카드와 뽑지 않은 카드를 조합하여 n+1만들어주기
 int Get_Card(){
 
-    // 1장을 뽑을 경우
+    // 1장을 뽑아 n+1을 경우
     for(int i=0; i<=n; i++){
         // ex) 12까지 카드가 있다고 가정했을 때, 2 + (12+1-2) = 13
         if (MyCardList[i] == 1 && CardsList[n+1-i] == 1){ 
@@ -28,7 +28,7 @@ int Get_Card(){
             return 1;
         }
     }
-    // 2장을 뽑을 경우
+    // 뽑은 2장이 n+1인 경우
     for(int i=0; i<=n; i++){
         if (MyCardList[i] == 1 && CardsList[n+1-i] == 1){
             MyCardList[i] =0;
@@ -37,7 +37,7 @@ int Get_Card(){
         }
     }
 
-    // 0장을 뽑는 경우
+    // 합을 n+1을 만들 수 없는 경우
     return 0; 
 }
 
@@ -74,7 +74,25 @@ int Solution(int coin, vector<int> cards) {
 
     // 라운드 진행
     for(int i = NowCount; i< NowCount; i++){
-        answer 
+        answer += 1;
+
+        //라운드별로 두장의 카드를 뽑고, 뽑을 카드를 저장
+        CardsList[cards[i]] =1;
+        CardsList[cards[i+1]] =1;
+
+        if(Trash_Card()){
+            continue;
+        }
+
+        // 손에 들고 있는 카드 + 뽑을카드 = n+1 후, 필요하다면 coins를 사용하여 조합을 만듦
+        temp = Get_Card();
+
+        if(temp && coin >= temp){
+            coin -= temp;
+        }
+        else {
+            return answer;
+        }  
     }
 
 
