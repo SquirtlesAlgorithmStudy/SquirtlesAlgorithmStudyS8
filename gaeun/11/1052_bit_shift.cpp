@@ -1,8 +1,7 @@
+// fav sol: bit shift
 #include <iostream>
-#include <bitset>
-using namespace std;
 
-#define BITS 20
+#define BITS 32
 
 int count(int num){
     int cnt = 0;
@@ -14,7 +13,7 @@ int count(int num){
 
 int main(){
     int N, K;
-    cin >> N >> K;
+    scanf("%d %d", &N, &K);
 
     int purchasedBottle = 0;
 
@@ -23,5 +22,5 @@ int main(){
         purchasedBottle++;
     }
 
-    cout << purchasedBottle;
+    printf("%d", purchasedBottle);
 }
