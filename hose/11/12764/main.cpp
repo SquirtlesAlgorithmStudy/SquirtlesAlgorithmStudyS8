@@ -1,102 +1,58 @@
 #include <iostream>
+#include <vector>
 #include <queue>
-#include <map>
 #include <algorithm>
+
 using namespace std;
 
-
-struct Person {
-    int start;
-    int end;
-   Person(int s, int e) : start(s), end(e) {}
-};
-
-struct ComparePerson {
-    bool operator()(const Person& p1, const Person& p2) {
-        return p1.start > p2.start;
-    }
-};
-
-
-
-struct Computer {
-    int end;
-    int number;
-
-    Computer(int e, int n) : end(e), number(n) {}
-};
-
-
-struct CompareComputer {
-    bool operator()(const Computer& c1, const Computer& c2) {
-        return c1.number > c2.number;
-    }
-};
-struct CompareComputer2 {
-    bool operator()(const Computer& c1, const Computer& c2) {
-        return c1.number > c2.number;
-    }
-};
-
-
 int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    priority_queue<Person, vector<Person>, ComparePerson> pq;
-    priority_queue<Computer, vector<Computer>, CompareComputer> cq;
-    std::map<int, int> map;
+    int N;
+    cin >> N;
 
-    int n = 0;
-    cin >> n;
-
-    int res = 0;
-
-    for (int i = 0; i < n; ++i) {
-        int start = 0;
-        int end = 0;
+    vector<pair<int, pair<string, int>>> events;
+    for (int i = 0; i < N; i++) {
+        int start, end;
         cin >> start >> end;
-        pq.push(Person{start, end});
+        events.push_back({start, {"Start", i}});
+        events.push_back({end, {"End", i}});
     }
 
-    if (n == 1) {
-        std::cout << 1 << endl;
-        std::cout << 1 << endl;
-        return 0;
-    }
+    sort(events.begin(), events.end());
 
-    Person fp = pq.top();
-    pq.pop();
-    res++;
-    cq.push(Computer{fp.end, res});
-    map[res] = 1;
+    priority_queue<int, vector<int>, greater<int>> pq_pc;
+    vector<int> pc_info_list(N, 0);
+    vector<int> person_idx2pc(N, -1);
+    int now_pc = 0;
 
-    for (int i = 1; i < n; ++i) {
+    for (const auto& event : events) {
+        int time = event.first;
+        string type = event.second.first;
+        int idx = event.second.second;
 
-        Person p = pq.top();
-        pq.pop();
-    
-        int start = p.start;
-
-        Computer c = cq.top();
-        cq.pop();
-
-        if (c.end < start) {
-            cq.push(Computer{p.end, c.number});
-            map[c.number] = map[c.number] + 1;
+        if (type == "Start") {
+            int pc;
+            if (!pq_pc.empty()) {
+                pc = pq_pc.top();
+                pq_pc.pop();
+            } else {
+                pc = now_pc++;
+            }
+            pc_info_list[pc]++;
+            person_idx2pc[idx] = pc;
         } else {
-            res++;
-            cq.push(Computer{p.end, res});
-            map[res] = 1;
+            int pc = person_idx2pc[idx];
+            pq_pc.push(pc);
         }
     }
 
-    std::cout << res << endl;
-
-    for (auto it = map.begin(); it != map.end(); ++it) {
-        std::cout << it->second;
-        if (next(it) != map.end()) {
-            std::cout << " ";
-        }
+    cout << now_pc << "\n";
+    for (int i = 0; i < now_pc; i++) {
+        cout << pc_info_list[i] << " ";
     }
-    std::cout << endl;
+    cout << "\n";
+
     return 0;
 }
