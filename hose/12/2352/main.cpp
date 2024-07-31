@@ -2,6 +2,9 @@
 #include <vector>
 using namespace std;
 
+// 오름차순이 아니면 선 끊김
+// 가장 긴 수열 찾기 -> lis
+// lowerbound라는 멋진 함수 이용하기
 
 int arr[40001];
 
