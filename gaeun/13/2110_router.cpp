@@ -64,3 +64,9 @@ int findMinDist(){
     }
     return gap;
 }
+
+
+// ** Binary Search:
+// 정렬되어 있는 리스트에서, 탐색 범위를 절반씩 좁혀가며 데이터를 탐색하는 방법. 
+// start, mid, end의 세 변수를 이용하며, 데이터를 mid와 비교하며 세 변수를 업데이트. 
+// O(logN) 보장
