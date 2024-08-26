@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8975B672C7CA2EB00BC48DB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8975B662C7CA2EB00BC48DB /* main.swift */; };
 		B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */; };
 		B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		B889E06A2C33C2AC00809148 /* boj_19583.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_19583.swift; sourceTree = "<group>"; };
 		B889E0722C33F4AA00809148 /* boj_1525.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1525.swift; sourceTree = "<group>"; };
 		B8975B642C7B186900BC48DB /* boj_11727.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_11727.swift; sourceTree = "<group>"; };
+		B8975B662C7CA2EB00BC48DB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = 7_23_Document.docc; sourceTree = "<group>"; };
 		B8A7D2752C4E4AAE00B4BF87 /* programmers_n+1카드게임.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "programmers_n+1카드게임.swift"; sourceTree = "<group>"; };
 		B8CA3C1E2C74919F00B4B31A /* boj_2839.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_2839.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B8975B642C7B186900BC48DB /* boj_11727.swift */,
+				B8975B662C7CA2EB00BC48DB /* main.swift */,
 			);
 			path = 8.27;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */,
 				B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */,
+				B8975B672C7CA2EB00BC48DB /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
