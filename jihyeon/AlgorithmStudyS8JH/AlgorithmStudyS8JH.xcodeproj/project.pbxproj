@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B8975B692C7CC40100BC48DB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8975B682C7CC40100BC48DB /* main.swift */; };
+		B8699B972C87274E00A18058 /* boj_12865.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8699B962C87274E00A18058 /* boj_12865.swift */; };
 		B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */; };
 		B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */ = {isa = PBXBuildFile; fileRef = B8D7469A2C368B85007AF3E2 /* HeapAndPQ.docc */; };
 /* End PBXBuildFile section */
@@ -27,12 +27,13 @@
 /* Begin PBXFileReference section */
 		B84B00212C60899700BE24A6 /* boj_17825.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_17825.swift; sourceTree = "<group>"; };
 		B84B00232C61008600BE24A6 /* boj_2352.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_2352.swift; sourceTree = "<group>"; };
+		B8699B962C87274E00A18058 /* boj_12865.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_12865.swift; sourceTree = "<group>"; };
 		B889E0672C33C2AC00809148 /* AlgorithmStudyS8JH */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmStudyS8JH; sourceTree = BUILT_PRODUCTS_DIR; };
 		B889E06A2C33C2AC00809148 /* boj_19583.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_19583.swift; sourceTree = "<group>"; };
 		B889E0722C33F4AA00809148 /* boj_1525.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1525.swift; sourceTree = "<group>"; };
 		B8975B642C7B186900BC48DB /* boj_11727.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_11727.swift; sourceTree = "<group>"; };
 		B8975B662C7CA2EB00BC48DB /* boj_2156.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_2156.swift; sourceTree = "<group>"; };
-		B8975B682C7CC40100BC48DB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B8975B682C7CC40100BC48DB /* boj_1149.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_1149.swift; sourceTree = "<group>"; };
 		B8A7D2732C4E411D00B4BF87 /* 7_23_Document.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = 7_23_Document.docc; sourceTree = "<group>"; };
 		B8A7D2752C4E4AAE00B4BF87 /* programmers_n+1카드게임.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "programmers_n+1카드게임.swift"; sourceTree = "<group>"; };
 		B8CA3C1E2C74919F00B4B31A /* boj_2839.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boj_2839.swift; sourceTree = "<group>"; };
@@ -62,6 +63,14 @@
 			path = 8.3;
 			sourceTree = "<group>";
 		};
+		B8699B952C87274500A18058 /* 9.3 */ = {
+			isa = PBXGroup;
+			children = (
+				B8699B962C87274E00A18058 /* boj_12865.swift */,
+			);
+			path = 9.3;
+			sourceTree = "<group>";
+		};
 		B889E05E2C33C2AC00809148 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +90,7 @@
 		B889E0692C33C2AC00809148 /* AlgorithmStudyS8JH */ = {
 			isa = PBXGroup;
 			children = (
+				B8699B952C87274500A18058 /* 9.3 */,
 				B8975B632C7B185E00BC48DB /* 8.27 */,
 				B8CA3C1D2C74918100B4B31A /* 8.20 */,
 				B8E2E5602C6B44EF0096E90C /* 8.13 */,
@@ -107,7 +117,7 @@
 			children = (
 				B8975B642C7B186900BC48DB /* boj_11727.swift */,
 				B8975B662C7CA2EB00BC48DB /* boj_2156.swift */,
-				B8975B682C7CC40100BC48DB /* main.swift */,
+				B8975B682C7CC40100BC48DB /* boj_1149.swift */,
 			);
 			path = 8.27;
 			sourceTree = "<group>";
@@ -215,7 +225,7 @@
 			files = (
 				B8A7D2742C4E411D00B4BF87 /* 7_23_Document.docc in Sources */,
 				B8D7469B2C368B85007AF3E2 /* HeapAndPQ.docc in Sources */,
-				B8975B692C7CC40100BC48DB /* main.swift in Sources */,
+				B8699B972C87274E00A18058 /* boj_12865.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
