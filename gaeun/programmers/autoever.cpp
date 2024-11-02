@@ -51,7 +51,7 @@ void sol(int N, int K){
                 caseK = 0;
                 for(int i=1; i<=K; i++){
                     caseK = i;
-                    checkAcc=0;
+                    checkAcc=0; // 이거 안하면 무한 loop..
                     for(int i=currAcc-caseK; i>=0; i=i-K){
                         checkAcc = checkAcc + i;
                     }
