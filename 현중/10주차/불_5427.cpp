@@ -9,7 +9,7 @@
 #include<iostream>
 #include<queue> // FIFO구조
 
-#define MAX = 1000 +1 // 지도 너비w 높이h 최대 크기
+#define MAX 1000 +1 // 지도 너비w 높이h 최대 크기
 #define X second
 #define Y first 
 
